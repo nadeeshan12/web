@@ -126,6 +126,9 @@
                 <div class="navbar-nav ms-auto">
                     <a href="#home" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="web .html" class="nav-item nav-link">Web Plans</a>
+                    <a href="grapic.html" class="nav-item nav-link">Grapic plans</a>
+                    <a href="Special.html" class="nav-item nav-link">Special plans</a>
                     <a href="#skill" class="nav-item nav-link">Skills</a>
                     <a href="#service" class="nav-item nav-link">Services</a>
                     <a href="#project" class="nav-item nav-link">Samples</a>
@@ -146,70 +149,143 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 py-6 pb-0 pt-lg-0">
                     <h3 class="text-primary mb-3">I'm</h3>
-                    <h1 class="display-3 mb-3">Nadeeshan </h1><h4>sulakshana</h4>
+                    <h1 class="display-3 mb-3">EVOZI </h1><h4>The heart reading brand</h4>
                     <h2 class="typed-text-output d-inline"></h2>
                     <div class="typed-text d-none">Web Designer, Grapic Designer, Video Editor, UI Designer </div>
                     <div class="d-flex align-items-center pt-5">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5">
-                            <span class="digit">0</span>
-                            <span class="digit">7</span>
-                            <span class="digit">1</span>
-                            <span class="digit">8</span>
-                            <span class="digit">7</span>
-                            <span class="digit">7</span>
-                            <span class="digit">4</span>
-                            <span class="digit">0</span>
-                            <span class="digit">2</span>
-                            <span class="digit">5</span>
-                        </a>
                         
-                        <style>
-                        .digit {
-                            display: inline-block;
-                            opacity: 0;
-                            transform: translateY(-20px);
-                            animation: digitFall 2s forwards infinite;
-                        }
+                        <div class="d-flex align-items-center pt-5">
+                            <a href="" class="rainbow-border-btn">
+                                <span class="digit">0</span>
+                                <span class="digit">7</span>
+                                <span class="digit">1</span>
+                                <span class="digit">8</span>
+                                <span class="digit">7</span>
+                                <span class="digit">7</span>
+                                <span class="digit">4</span>
+                                <span class="digit">0</span>
+                                <span class="digit">2</span>
+                                <span class="digit">5</span>
+                                <!-- ... other digits ... -->
+                            </a>
                         
-                        @keyframes digitFall {
-                            0% {
-                                opacity: 0;
-                                transform: translateY(-20px);
+                            <style>
+                            .rainbow-border-btn {
+                                background: rgba(33, 37, 41, 0.8);
+                                padding: 15px 25px;
+                                position: relative;
+                                border-radius: 10px;
+                                text-decoration: none;
+                                color: white;
+                                z-index: 1;
+                                overflow: hidden;
                             }
-                            20% {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                            80% {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                            100% {
-                                opacity: 0;
-                                transform: translateY(20px);
-                            }
-                        }
                         
-                        .digit:nth-child(1) { animation-delay: 0.1s; }
-                        .digit:nth-child(2) { animation-delay: 0.2s; }
-                        .digit:nth-child(3) { animation-delay: 0.3s; }
-                        .digit:nth-child(4) { animation-delay: 0.4s; }
-                        .digit:nth-child(5) { animation-delay: 0.5s; }
-                        .digit:nth-child(6) { animation-delay: 0.6s; }
-                        .digit:nth-child(7) { animation-delay: 0.7s; }
-                        .digit:nth-child(8) { animation-delay: 0.8s; }
-                        .digit:nth-child(9) { animation-delay: 0.9s; }
-                        .digit:nth-child(10) { animation-delay: 1s; }
-                        </style>
+                            .rainbow-border-btn::before {
+                                content: '';
+                                position: absolute;
+                                top: -2px;
+                                left: -2px;
+                                right: -2px;
+                                bottom: -2px;
+                                background: linear-gradient(
+                                    45deg,
+                                    #ff0000,
+                                    #ff9a00,
+                                    #d0de21,
+                                    #4fdc4a,
+                                    #3fdad8,
+                                    #2fc9e2,
+                                    #1c7fee,
+                                    #5f15f2,
+                                    #ba0cf8,
+                                    #fb07d9,
+                                    #ff0000
+                                );
+                                border-radius: 10px;
+                                z-index: -2;
+                                animation: animatedgradient 3s ease alternate infinite;
+                                background-size: 400% 400%;
+                            }
+                        
+                            .rainbow-border-btn::after {
+                                content: '';
+                                position: absolute;
+                                top: 2px;
+                                left: 2px;
+                                right: 2px;
+                                bottom: 2px;
+                                background: #212529;
+                                border-radius: 8px;
+                                z-index: -1;
+                            }
+                        
+                            @keyframes animatedgradient {
+                                0% { background-position: 0% 50%; }
+                                50% { background-position: 100% 50%; }
+                                100% { background-position: 0% 50%; }
+                            }
+                        
+                            .rainbow-border-btn:hover::before {
+                                animation-play-state: paused;
+                            }
+                            </style>
+                       
                         <a href="https://wa.me/94718774025" class="whatsapp-link" target="_blank">
                             <img src="img/whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
                         </a>
                         <h5 class="ms-4 mb-0 d-none d-sm-block">WhatsApp</h5>
                     </div>
+
+                    
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center">
-                    <img class="img-fluid animated-logo" src="img/logo.png" alt="logo">
+                    <div class="logo-wrapper">
+                        <img class="img-fluid enhanced-logo" src="img/logo.png" alt="logo" loading="lazy">
+                    </div>
                 </div>
+                
+                <!-- Add this CSS -->
+                <style>
+                .logo-wrapper {
+                    position: relative;
+                    perspective: 1000px;
+                    margin-top: 50px
+                }
+                
+                .enhanced-logo {
+                    opacity: 0;
+                    transform: translateY(20px);
+                    animation: logoReveal 1.2s ease-out forwards,
+                               logoFloat 3s ease-in-out infinite 1.2s;
+                    filter: drop-shadow(0 0 10px rgba(98, 68, 197, 0.3));
+                    transition: filter 0.3s ease;
+                }
+                
+                .enhanced-logo:hover {
+                    filter: drop-shadow(0 0 20px rgba(98, 68, 197, 0.6));
+                }
+                
+                @keyframes logoReveal {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(20px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                @keyframes logoFloat {
+                    0%, 100% {
+                        transform: translateY(0) scale(1);
+                    }
+                    50% {
+                        transform: translateY(-15px) scale(1.02);
+                    }
+                }
+                </style>
             </div>
         </div>
     </div>
@@ -235,7 +311,7 @@
         </div>
     </div>
     <!-- Video Modal End -->
-
+<!--stop-->>
 
     <!-- About Start -->
     <div class="container-xxl py-6" id="about">
@@ -258,10 +334,10 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="row g-3 mb-4">
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/ab1.jpg" alt="">
                         </div>
                         <div class="col-sm-6">
-                            <img class="img-fluid rounded" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid rounded" src="img/ab2.jpg" alt="">
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -279,9 +355,116 @@
         </div>
     </div>
     <!-- About End -->
+<div></div>
 
+<!-- Plans Section Start -->
+<div class="container-xxl py-6" id="plans">
+    <div class="container">
+        <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-6">
+                <h1 class="display-5 mb-0">Our Plans</h1>
+            </div>
+        </div>
+        
+        <!-- Plans Cards -->
+        <div class="row g-4">
+    <!-- Basic Plan -->
+    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="plan-card bg-dark rounded-3 position-relative overflow-hidden">
+            <div class="green-glow"></div>
+            <div class="p-5 text-center">
+                <h3 class="text-light mb-4">Web design </h3>
+                <p class="text-light mb-4">The heart reading brand.</p>
+                <a href="web .html" class="btn btn-primary py-3 px-5 mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Standard Plan -->
+    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="plan-card bg-dark rounded-3 position-relative overflow-hidden">
+            <div class="green-glow"></div>
+            <div class="p-5 text-center">
+                <h3 class="text-light mb-4">Grapic design</h3>
+                <p class="text-light mb-4">The heart reading brand.</p>
+                <a href="grapic.html" class="btn btn-primary py-3 px-5 mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Premium Plan -->
+    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="plan-card bg-dark rounded-3 position-relative overflow-hidden">
+            <div class="green-glow"></div>
+            <div class="p-5 text-center">
+                <h3 class="text-light mb-4">Specal plans</h3>
+                <p class="text-light mb-4">The heart reading brand.</p>
+                <a href="Special.html" class="btn btn-primary py-3 px-5 mt-4">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Plans Section End -->
 
-    <!-- Expertise Start -->
+<!-- Add this CSS -->
+<style>
+    .animated-heading {
+        background: linear-gradient(45deg, #0ea5e9, #22c55e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s ease infinite;
+    }
+
+    .plan-card {
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .plan-card:hover {
+        transform: translateY(-10px);
+    }
+
+    .green-glow {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(34, 197, 94, 0.2);
+        border-radius: 50%;
+        filter: blur(50px);
+        top: -20px;
+        right: -20px;
+        animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-20px) scale(1.1); }
+        100% { transform: translateY(0) scale(1); }
+    }
+
+    .plan-features p {
+        margin-bottom: 1rem;
+        opacity: 0.9;
+    }
+
+    .plan-card:hover .green-glow {
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); opacity: 0.2; }
+        50% { transform: scale(1.2); opacity: 0.4; }
+        100% { transform: scale(1); opacity: 0.2; }
+    }
+</style>
+
+<!-- Expertise Start -->
     <div class="container-xxl py-6 pb-5" id="skill">
         <div class="container">
             <div class="row g-5">
@@ -637,20 +820,83 @@
 
 
     <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white py-4">
+        <!-- Copyright Start -->
+        <div class="container-fluid bg-dark text-white py-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom text-secondary" href="#">evozi store</a>, All Right Reserved.
+                <div class="row g-5 mb-5">
+                    <!-- Logo and About -->
+                    <div class="col-lg-3">
+                        <img src="img/logo.png" alt="Evozi" class="footer-logo mb-4" style="height: 60px;">
+                        <p class="text-white-50">The heart reading brand that delivers exceptional web design, graphic design, and digital solutions to bring your vision to life.</p>
+                    </div>
+                    
+                    <!-- Main Links -->
+                    <div class="col-lg-3">
+                        <h4 class="text-white mb-4">Quick Links</h4>
+                        <a class="btn btn-link text-white-50" href="#home">Home</a>
+                        <a class="btn btn-link text-white-50" href="#about">About Us</a>
+                        <a class="btn btn-link text-white-50" href="#service">Services</a>
+                        <a class="btn btn-link text-white-50" href="#project">Projects</a>
+                        <a class="btn btn-link text-white-50" href="#contact">Contact</a>
+                    </div>
+    
+                    <!-- Plans -->
+                    <div class="col-lg-3">
+                        <h4 class="text-white mb-4">Our Plans</h4>
+                        <a class="btn btn-link text-white-50" href="web.html">Web Design</a>
+                        <a class="btn btn-link text-white-50" href="grapic.html">Graphic Design</a>
+                        <a class="btn btn-link text-white-50" href="Special.html">Special Plans</a>
+                    </div>
+    
+                    <!-- Contact -->
+                    <div class="col-lg-3">
+                        <h4 class="text-white mb-4">Get In Touch</h4>
+                        <p class="mb-2 text-white-50"><i class="fa fa-phone-alt me-3"></i>+94 080 7947</p>
+                        <p class="mb-2 text-white-50"><i class="fa fa-envelope me-3"></i>datalokka38@gmail.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Copyright -->
+                <div class="row border-top border-secondary pt-4">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2024 <a class="text-primary" href="#">Evozi Store</a>. All Rights Reserved.</p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">Nadeeshan sulakshana</a>
+                        <p class="mb-0">Designed by <a class="text-primary" href="#">Nadeeshan Sulakshana</a></p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Copyright End -->
+    
+        <style>
+        .btn-link {
+            display: block;
+            text-align: left;
+            padding: 5px 0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-link:hover {
+            color: var(--primary) !important;
+            transform: translateX(5px);
+        }
+    
+        .footer-logo {
+            filter: brightness(0) invert(1);
+            transition: all 0.3s;
+        }
+    
+        .footer-logo:hover {
+            filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(255,255,255,0.5));
+        }
+        </style>
     <!-- Copyright End -->
 
 
