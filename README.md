@@ -1,2 +1,0 @@
-# web
-powerd by nadeeshan
