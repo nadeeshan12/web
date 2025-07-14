@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Book | DarkMode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #06923e;
+            --dark-bg: #121212;
+            --darker-bg: #0a0a0a;
+            --light-text: #e0e0e0;
+            --lighter-text: #ffffff;
+            --medium-gray: #333333;
+            --light-gray: #444444;
+            --accent-color: #06923e;
+            --hover-color: #07c452;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--light-text);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--darker-bg);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            margin-right: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-color), #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 3rem 0;
+        }
+
+        /* Product Section */
+        .product-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .product-image {
+            flex: 1;
+            max-width: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+        }
+
+        .product-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(6, 146, 62, 0.3);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--lighter-text);
+        }
+
+        .product-author {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .product-description {
+            margin-bottom: 2rem;
+            color: var(--light-text);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .download-btn:hover {
+            background-color: var(--hover-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(6, 196, 82, 0.4);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--darker-bg);
+            padding: 3rem 0;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--lighter-text);
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background-color: var(--medium-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background-color: var(--light-gray);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .contact-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--lighter-text);
+        }
+
+        .contact-link {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* WhatsApp specific */
+        .whatsapp-card:hover {
+            background-color: #25D366;
+        }
+
+        .whatsapp-card:hover .contact-icon,
+        .whatsapp-card:hover .contact-title,
+        .whatsapp-card:hover .contact-link {
+            color: white;
+        }
+
+        /* Telegram specific */
+        .telegram-card:hover {
+            background-color: #0088cc;
+        }
+
+        .telegram-card:hover .contact-icon,
+        .telegram-card:hover .contact-title,
+        .telegram-card:hover .contact-link {
+            color: white;
+        }
+
+        /* Email specific */
+        .email-card:hover {
+            background-color: #D44638;
+        }
+
+        .email-card:hover .contact-icon,
+        .email-card:hover .contact-title,
+        .email-card:hover .contact-link {
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .product-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .product-image {
+                max-width: 100%;
+            }
+            
+            .product-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .product-title {
+                font-size: 1.5rem;
+            }
+            
+            .product-author {
+                font-size: 1rem;
+            }
+            
+            .download-btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">
+                    <span class="logo-icon">🦇</span>
+                    <span class="logo-text">evozi.store</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Product Download Section -->
+            <section class="product-section">
+                <div class="product-image">
+                    <img src="img/5.png" alt="Dark Code Chronicles">
+                </div>
+                <div class="product-info">
+                    <h1 class="product-title">Kotipathi-Merayekuge-Adaraya</h1>
+                    <span class="product-author">E-book</span>
+                    <p class="product-description">
+                        කිසියම් තාක්ශණික දෝශයක් පවතීනම් අප්ව සම්බන්ධ කරගැණීමට වග බලාගන්න.ඔයාගෙ පොටත් අපිට එවන්න අමතක කරන්න එපා.ස්තූතියි.
+                    </p>
+                    <a href="Kotipathi-Merayekuge-Adaraya-sinhalaebook.com.pdf.pdf" download class="download-btn">
+    <i class="fas fa-download"></i> Download Now
+</a>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="contact-section">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-methods">
+                    <div class="contact-card whatsapp-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="contact-title">WhatsApp</h3>
+                        <a href="https://wa.me/+94718774025" class="contact-link">Chat with us</a>
+                    </div>
+                    
+                    <div class="contact-card telegram-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3 class="contact-title">Telegram</h3>
+                        <a href="https://t.me/@Nadeeshan_s" class="contact-link">Join our channel</a>
+                    </div>
+                    
+                    <div class="contact-card email-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <a href="datalokka38@gmail.com" class="contact-link">datalokka38@gmail.com</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Download button animation
+        const downloadBtn = document.querySelector('.download-btn');
+        
+        downloadBtn.addEventListener('click', function() {
+            // Simulate download (in real implementation, this would trigger actual download)
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Downloading...';
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-check"></i> Download Complete!';
+                this.style.backgroundColor = '#4CAF50';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fas fa-download"></i> Download Now';
+                    this.style.backgroundColor = '#06923e';
+                }, 3000);
+            }, 2000);
+        });
+        
+        // Contact card animations
+        const contactCards = document.querySelectorAll('.contact-card');
+        
+        contactCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+            
+            // For touch devices
+            card.addEventListener('touchstart', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = 'translateY(0)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>
